@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Header from "./header";
 import Footer from "./footer";
+
 const HomeTable = () => {
   const [data, setData] = useState(null);
 
@@ -18,6 +19,7 @@ const HomeTable = () => {
 
     fetchData();
   }, []); // Empty dependency array to ensure this effect runs once
+
   // Function to format the timestamp to "DD-MM-YYYY hh:mm A" format
   const formatTimestamp = (timestamp) => {
     const options = {
@@ -31,6 +33,7 @@ const HomeTable = () => {
     const formattedDate = new Date(timestamp).toLocaleDateString('en-IN', options);
     return formattedDate;
   };
+
   const renderNumbersGrid = () => {
     if (!data || !data.numbers || data.numbers.length === 0) {
       return <p>No numbers available</p>;
@@ -86,7 +89,7 @@ const HomeTable = () => {
 
   return (
     <div class="w-full bg-slate-300">
-        <Header />
+      <Header nextRelease={data ? formatTimestamp(data.next_release) : ''} />
       {data ? (
         <>
           {renderNumbersGrid()}
@@ -94,7 +97,7 @@ const HomeTable = () => {
       ) : (
         <p>Loading data...</p>
       )}
-      <Footer/>
+      <Footer />
     </div>
   );
 };

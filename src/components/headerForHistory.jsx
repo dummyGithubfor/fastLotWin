@@ -1,5 +1,5 @@
-const Header = ({ nextRelease }) => {
-  const timeParts = nextRelease.split(",");
+const HeaderForHistory = () => {
+//   const timeParts = nextRelease.split(",");
   return (
     <div class="bg-slate-300 h-full w-full flex flex-col ">
       <div class="h-40 bg-custom-blue w-full ">
@@ -12,7 +12,7 @@ const Header = ({ nextRelease }) => {
           <div class="flex-1"></div>
           <div class=" flex justify-between h-24 w-5/6 bg-custom-black mr-56 rounded-lg mt-1 ml-6">
             <h3 class="text-white text-xl font-semibold ml-6 mt-7">
-              Next:{timeParts[timeParts.length - 1]}
+              Next:11 am
             </h3>
             <div class="flex flex-row-reverse space-x-4 space-x-reverse space-y-6 ">
               <div class="text-center">
@@ -37,10 +37,10 @@ const Header = ({ nextRelease }) => {
               </div>
               <button class="h-8 w-10 bg-rose-600 rounded-sm border border-lime-600 hover:border-teal-700 flex flex-col items-center justify-center">
                 {/* <img
-                  class="icon h-5 w-5 fill-white "
-                  src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMTMuNSAyYy01LjYyMSAwLTEwLjIxMSA0LjQ0My0xMC40NzUgMTBoLTMuMDI1bDUgNi42MjUgNS02LjYyNWgtMi45NzVjLjI1Ny0zLjM1MSAzLjA2LTYgNi40NzUtNiAzLjU4NCAwIDYuNSAyLjkxNiA2LjUgNi41cy0yLjkxNiA2LjUtNi41IDYuNWMtMS44NjMgMC0zLjU0Mi0uNzkzLTQuNzI4LTIuMDUzbC0yLjQyNyAzLjIxNmMxLjg3NyAxLjc1NCA0LjM4OSAyLjgzNyA3LjE1NSAyLjgzNyA1Ljc5IDAgMTAuNS00LjcxIDEwLjUtMTAuNXMtNC43MS0xMC41LTEwLjUtMTAuNXoiLz48L3N2Zz4="
-                  alt="refresh img"
-                /> */}
+                    class="icon h-5 w-5 fill-white "
+                    src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMTMuNSAyYy01LjYyMSAwLTEwLjIxMSA0LjQ0My0xMC40NzUgMTBoLTMuMDI1bDUgNi42MjUgNS02LjYyNWgtMi45NzVjLjI1Ny0zLjM1MSAzLjA2LTYgNi40NzUtNiAzLjU4NCAwIDYuNSAyLjkxNiA2LjUgNi41cy0yLjkxNiA2LjUtNi41IDYuNWMtMS44NjMgMC0zLjU0Mi0uNzkzLTQuNzI4LTIuMDUzbC0yLjQyNyAzLjIxNmMxLjg3NyAxLjc1NCA0LjM4OSAyLjgzNyA3LjE1NSAyLjgzNyA1Ljc5IDAgMTAuNS00LjcxIDEwLjUtMTAuNXMtNC43MS0xMC41LTEwLjUtMTAuNXoiLz48L3N2Zz4="
+                    alt="refresh img"
+                  /> */}
                 <svg
                   class="animate-spin h-6 w-6 text-white"
                   xmlns="http://www.w3.org/2000/svg"
@@ -70,8 +70,11 @@ const Header = ({ nextRelease }) => {
             <button class="h-8 w-16  bg-rose-600 rounded-sm border border-lime-600 hover:border-teal-700">
               <p class="text-white">FULL</p>
             </button>
-            <button class="h-8 w-20  bg-rose-600 hover:bg-black rounded-sm border border-lime-600">
-              <p class="text-white  font-semibold">HISTORY</p>
+            <button class="h-8 w-16  bg-rose-600 rounded-sm border border-lime-600 hover:border-teal-700">
+              <p class="text-white">CHART</p>
+            </button>
+            <button class="h-8 w-16  bg-rose-600 hover:bg-black rounded-sm border border-lime-600">
+              <p class="text-white  font-semibold">HOME</p>
             </button>
           </div>
         </div>
@@ -80,4 +83,4 @@ const Header = ({ nextRelease }) => {
     </div>
   );
 };
-export default Header;
+export default HeaderForHistory;

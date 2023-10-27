@@ -3,11 +3,12 @@ import './App.css';
 // import HomePage from "./components/header";
 // import Footer from "./components/footer";
 import HomeTable from "./components/home";
+import HistoryTable from "./components/history";
 function App() {
   return (
    <div>
-    
-    <HomeTable/>
+    <HistoryTable/>
+    {/* <HomeTable/> */}
    
    </div>
   );

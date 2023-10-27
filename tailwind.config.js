@@ -6,9 +6,11 @@ module.exports = {
   theme: {
     extend: {
       backgroundColor: {
-        'custom-pink': '#F7D5C8', // Define the custom color
+        'custom-pink': '#F7D5C8', 
+        'custom-blue': '#00F',
+        'custom-black': '#131A3E', 
       },
     },
   },
   plugins: [],
-}
+};
